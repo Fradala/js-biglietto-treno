@@ -16,11 +16,11 @@ const scontoMino = prezzoTotale / scontoMinorenni
 
 const scontoPensione = prezzoTotale / scontoPensionati
 
-if ( etàPasseggiero == minorenne){
+if ( minorenne){
     console.log( 'sconto del 20%', minorenne);
 
 
-}else if( etàPasseggiero == pensionato){
+}else if( pensionato){
     console.log( 'sconto del 40%', pensionato);
 
 }

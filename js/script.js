@@ -4,17 +4,17 @@ const minorenne = etàPasseggiero < 18
 const pensionato = etàPasseggiero > 65
 
 
-const scontoMinorenni = 20
-const scontoPensionati = 40
+let scontoMinorenni = prezzoTotale - 20%;
+let scontoPensionati = prezzoTotale - 40%;
 
-const prezzoBigglietto1Km = 0.21
+const prezzoBigglietto1Km = 0.21;
 
 
 const prezzoTotale = prezzoBigglietto1Km + kilometriPasseggiero
 
-const scontoMino = prezzoTotale / scontoMinorenni
+/*const scontoMino = prezzoTotale / scontoMinorenni
 
-const scontoPensione = prezzoTotale / scontoPensionati
+const scontoPensione = prezzoTotale / scontoPensionati*/
 
 if ( minorenne){
     console.log( 'sconto del 20%', minorenne);

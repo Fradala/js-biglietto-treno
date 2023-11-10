@@ -2,26 +2,30 @@ const kilometriPasseggiero = parseInt ( prompt( 'dichiara i km che vuoi percorre
 const etàPasseggiero = parseInt ( prompt( 'quanti anni hai'));
 const minorenne = etàPasseggiero < 18
 const pensionato = etàPasseggiero > 65
-
-
-let scontoMinorenni = prezzoTotale - 20%;
-let scontoPensionati = prezzoTotale - 40%;
-
+const adulto = etàPasseggiero != minorenne != pensionato;
 const prezzoBigglietto1Km = 0.21;
+const prezzoTotale = prezzoBigglietto1Km + kilometriPasseggiero;
 
 
-const prezzoTotale = prezzoBigglietto1Km + kilometriPasseggiero
 
-/*const scontoMino = prezzoTotale / scontoMinorenni
+let scontoMinorenni = prezzoTotale * 20 / 100;
+let scontoPensionati = prezzoTotale * 40 / 100;
 
-const scontoPensione = prezzoTotale / scontoPensionati*/
+
+const prezzoConScontMino = prezzoTotale - scontoMinorenni
+const prezzoConScontoPensio = prezzoTotale - scontoPensionati
+
 
 if ( minorenne){
-    console.log( 'sconto del 20%', minorenne);
+    document.getElementById ('biglietto').innerHTML= 'il biglietto costa :' + prezzoConScontMino
 
 
 }else if( pensionato){
-    console.log( 'sconto del 40%', pensionato);
+    document.getElementById( ' biglietto').innerHTML= 'il biglietto costa :' + prezzoConScontoPensio
+    
 
+}else{
+    adulto
+    document.getElementById('biglietto').innerHTML= 'il biglietto costa :' + prezzoTotale
 }
 

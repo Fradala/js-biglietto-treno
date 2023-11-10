@@ -15,13 +15,19 @@ let scontoPensionati = prezzoTotale * 40 / 100;
 const prezzoConScontMino = prezzoTotale - scontoMinorenni
 const prezzoConScontoPensio = prezzoTotale - scontoPensionati
 
+const numM = prezzoConScontMino;
+alert( numM.toFixed(2) );
+
+const numP = prezzoConScontoPensio;
+alert( numP.toFixed() );
+
 
 if ( minorenne){
-    document.getElementById ('biglietto').innerHTML= 'il biglietto costa :' + prezzoConScontMino
+    document.getElementById ('biglietto').innerHTML= 'il biglietto costa :' + prezzoConScontMino 
 
 
 }else if( pensionato){
-    document.getElementById( ' biglietto').innerHTML= 'il biglietto costa :' + prezzoConScontoPensio
+    document.getElementById('biglietto').innerHTML= 'il biglietto costa :' + prezzoConScontoPensio
     
 
 }else{
